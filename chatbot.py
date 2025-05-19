@@ -38,6 +38,10 @@ def main():
             print(respuesta)
     def saludo():
         return "Hola"  # espacio innecesario entre función y paréntesis (flake8 lo marca)
+def responder_pregunta(pregunta):
+    if "color" in pregunta.lower():
+        return "Rojo"  # Cambiaste esto a propósito
+    return "No entiendo la pregunta."
 
 if __name__ == "__main__":
     main()
