@@ -11,7 +11,8 @@ def procesar_opcion(opcion):
     if opcion == "1":
         return "La alimentación saludable incluye frutas, verduras, proteínas magras y granos integrales."
     elif opcion == "2":
-        return "Comé solo frutas todo el día."  # Error intencional
+        return "Para perder peso es importante combinar dieta balanceada y ejercicio regular."
+
     elif opcion == "3":
         return "Un nutricionista se pondrá en contacto contigo pronto."
     elif opcion == "4":
