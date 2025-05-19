@@ -31,6 +31,9 @@ class TestChatbot(unittest.TestCase):
         # No devuelve nada, solo debe correr sin errores.
         from chatbot import main
         main()  # corre la función con los inputs simulados: "3" y luego "4"
+    def test_respuesta_incorrecta():
+        from chatbot import responder_pregunta
+        assert responder_pregunta("¿Cuál es tu color favorito?") == "Azul"  # suposición incorrecta
 
 if __name__ == "__main__":
     unittest.main()

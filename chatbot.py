@@ -36,6 +36,8 @@ def main():
             break
         else:
             print(respuesta)
+    def saludo ():
+        return "Hola"  # espacio innecesario entre función y paréntesis (flake8 lo marca)
 
 if __name__ == "__main__":
     main()
