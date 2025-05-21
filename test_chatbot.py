@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from chatbot import mostrar_menu, procesar_opcion
 
+
 class TestChatbot(unittest.TestCase):
 
     def test_mostrar_menu(self):
@@ -15,15 +16,21 @@ class TestChatbot(unittest.TestCase):
 
     def test_procesar_opcion_1(self):
         resultado = procesar_opcion("1")
-        self.assertEqual(resultado, "La alimentación saludable incluye frutas, verduras, proteínas magras y granos integrales.")
+        self.assertEqual(
+            resultado,
+            "La alimentación saludable incluye frutas, verduras, proteínas magras y granos integrales.")
 
     def test_procesar_opcion_2(self):
         resultado = procesar_opcion("2")
-        self.assertEqual(resultado, "Para perder peso es importante combinar dieta balanceada y ejercicio regular.")
+        self.assertEqual(
+            resultado,
+            "Para perder peso es importante combinar dieta balanceada y ejercicio regular.")
 
     def test_opcion_invalida(self):
         resultado = procesar_opcion("9")
-        self.assertEqual(resultado, "Opción no válida, por favor intenta de nuevo.")
+        self.assertEqual(
+            resultado,
+            "Opción no válida, por favor intenta de nuevo.")
 
     @patch('builtins.input', side_effect=["3", "4"])
     def test_main_interaccion(self, mock_input):

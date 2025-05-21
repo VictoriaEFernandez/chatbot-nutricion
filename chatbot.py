@@ -7,6 +7,7 @@ def mostrar_menu():
     ]
     return opciones
 
+
 def procesar_opcion(opcion):
     if opcion == "1":
         return "La alimentación saludable incluye frutas, verduras, proteínas magras y granos integrales."
@@ -20,15 +21,16 @@ def procesar_opcion(opcion):
     else:
         return "Opción no válida, por favor intenta de nuevo."
 
+
 def main():
     print("¡Bienvenido al Chatbot de Nutrición!")
-    
+
     while True:
         opciones = mostrar_menu()
         print("\nPor favor, selecciona una opción:")
         for i, opcion in enumerate(opciones, start=1):
             print(f"{i}. {opcion}")
-        
+
         opcion = input("Ingrese el número de la opción: ")
         respuesta = procesar_opcion(opcion)
         if respuesta == "Salir":
@@ -36,12 +38,17 @@ def main():
             break
         else:
             print(respuesta)
+
     def saludo():
-        return "Hola"  # espacio innecesario entre función y paréntesis (flake8 lo marca)
+        # espacio innecesario entre función y paréntesis (flake8 lo marca)
+        return "Hola"
+
+
 def responder_pregunta(pregunta):
     if "color" in pregunta.lower():
         return "Rojo"  # Cambiaste esto a propósito
     return "No entiendo la pregunta."
+
 
 if __name__ == "__main__":
     main()
